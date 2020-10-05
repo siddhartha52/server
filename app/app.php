@@ -42,7 +42,7 @@ if(isset($_POST['username']) and isset($_POST['password']))
 				$output['myheader'] = array(
 					'response' => false,
 				);
-				print(json_encode($output)); 
+				echo json_encode($output); 
 				die();
 			}
 			
@@ -97,7 +97,7 @@ if(isset($_POST['username']) and isset($_POST['password']))
 				'rollno' => $rollno,
 				'classname' => $year.$coursename."-".$division,
 			);
-			 print(json_encode($output)); 
+			 echo json_encode($output); 
 			 die();
 		}
 		//invalid password 
@@ -106,7 +106,7 @@ if(isset($_POST['username']) and isset($_POST['password']))
 				'response' => false,
                                 'login'=>"Failed",
 			);
-			print(json_encode($output));
+			echo json_encode($output);
 			die();
 		}
 		
@@ -117,7 +117,7 @@ if(isset($_POST['username']) and isset($_POST['password']))
 			'response' => false,
                         'login'=>"Failed",
 		);
-		print(json_encode($output));
+		echo json_encode($output);
 		die();
 	}
 	
